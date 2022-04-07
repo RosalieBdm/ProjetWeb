@@ -1,8 +1,0 @@
-function clickCarte(){
-
-
-}
-
-function clickCompte(){
-    
-}
