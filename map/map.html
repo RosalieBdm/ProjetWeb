@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Webproject</title>
+
+   <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""
+    />
+
+    <script
+      src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin=""
+    ></script>
+
+<style>
+#map {
+    width: 1200px;
+    height:700px;
+    position : relative;
+    left : 100px;
+    top: 100px;
+}
+</style>
+
+</head>
+
+<body>
+
+    <div id="map"></div>
+
+<script>
+
+    var map = L.map('map',{
+    center: [45.78341234572953, 4.878173098359132],
+    zoom: 16
+    });
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+</script>
+<button aria-label="Signaler" (click)="selection.value = 'Carte'" tabindex="0" target="_blank" rel="noopener" href="_blank" title="Carte" id = 'signaler' onClick = 'clickSignaler()'>
+  
+</button>
+
+
+<script>
+
+    var popup = L.popup();
+
+    var chairIcon = L.icon({
+            iconUrl: './icones/chair.png',
+            shadowUrl: './icones/placeholder.png',
+
+            iconSize:     [20, 20], // size of the icon
+            shadowSize:   [50, 50], // size of the shadow
+            iconAnchor:   [10, 40], // point of the icon which will correspond to marker's location
+            shadowAnchor: [25, 50],  // the same for the shadow
+            popupAnchor:  [50 ,50] // point from which the popup should open relative to the iconAnchor
+
+    });
+
+    var pinIcon = L.icon({
+            iconUrl: './icones/placeholder.png',
+
+            iconSize: [30, 30], // size of the shadow
+            iconAnchor:[15, 30],  // the same for the shadow
+            popupAnchor:  [50 ,50] // point from which the popup should open relative to the iconAnchor
+
+    });
+
+    function clickSignaler(){
+        pinIcon
+    }
+
+    function addChair(e) {
+         L.marker(e.latlng, {icon: pinIcon}).addTo(map);
+        
+    }
+
+    function onMapClick(e) {
+         L.marker(e.latlng, {icon: pinIcon}).addTo(map);
+
+    }
+
+    map.on('click', onMapClick);
+
+
+    
+
+
+
+  </script>
+</body>
+
+</html>
+
+
+
+
+
+
