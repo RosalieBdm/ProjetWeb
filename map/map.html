@@ -4,7 +4,7 @@
 
 <head>
 
-<title>Webproject</title>
+<title>Carte campus</title>
 
    <link
       rel="stylesheet"
@@ -62,9 +62,6 @@
   top: 550px;
 
 }
-
-
-
 </style>
 
 </head>
@@ -154,14 +151,14 @@
     function clickPetit(){
        L.marker(coord, {icon: chairIcon}).addTo(map).bindPopup("Valider l'encombrant?");
        map.closePopup();
-       var elem = document.getElementById('petit');
-        elem.parentNode.removeChild(elem);
-        var elem = document.getElementById('gros');
-        elem.parentNode.removeChild(elem);
-        var elem = document.getElementById('electro');
-        elem.parentNode.removeChild(elem);
-        var elem = document.getElementById('annuler');
-        elem.parentNode.removeChild(elem);
+       //var elem = document.getElementById('petit');
+       // elem.parentNode.removeChild(elem);
+       // var elem = document.getElementById('gros');
+       // elem.parentNode.removeChild(elem);
+       // var elem = document.getElementById('electro');
+       // elem.parentNode.removeChild(elem);
+       // var elem = document.getElementById('annuler');
+       // elem.parentNode.removeChild(elem);
       
     }
     function clickGros(){
@@ -171,7 +168,7 @@
     }
     function clickElectro(){
        L.marker(coord, {icon: fourIcon}).addTo(map);
-       map.closePopup();
+     map.closePopup();
        
     }
     function clickAnnuler(){
