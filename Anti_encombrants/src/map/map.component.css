@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro&family=Dancing+Script:wght@500&display=swap');
+
+#map {
+    width: 1200px;
+    height:700px;
+    position : relative;
+    left : 100px;
+    top: 100px;
+    
+}
+#petit{
+    width: 100px;
+    height:50px;
+    position : absolute;
+    left : 1500px;
+    top: 200px;
+    display: none;
+  
+  }
+  
+  #gros{
+    width: 100px;
+    height:50px;
+    position : absolute;
+    left : 1500px;
+    top: 300px;
+    display: none;
+  
+  }
+ 
+  #electro{
+    width: 100px;
+    height:50px;
+    position : absolute;
+    left : 1500px;
+    top: 400px;
+    display: none;
+  
+  }
+  
+  #annuler{
+    width: 100px;
+    height:50px;
+    position : absolute;
+    left : 1500px;
+    top: 550px;
+    display: none;
+  }
+  
+  #menu{
+    width: 200px;
+    height:50px;
+    position : absolute;
+    left : 1450px;
+    top: 50px;
+  
+  }
